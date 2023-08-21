@@ -220,7 +220,6 @@ body {
 
 .tab-buttons {
   display: flex;
-  margin-bottom: -10px;
 }
 
 .tab-button {
@@ -232,6 +231,7 @@ body {
   border-radius: 8px;
   font-size: 12px;
   font-weight: 700;
+  padding: 13px 24px;
 }
 
 .tab-button.active {
@@ -373,6 +373,7 @@ body {
 }
 
 .card-btn {
+  width: 100px;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -381,11 +382,12 @@ body {
   font-size: 16px;
   font-weight: 700;
   padding: 2px;
+  padding: 16px 19px;
   line-height: 100%;
   background: var(--background-color-white);
 }
 
-.card-btn .counter {
+.card-btn #counter {
   width: 100px;
 }
 
@@ -413,6 +415,11 @@ body {
   border: 2px solid var(--primary-color);
   background: #FDE757;
   cursor: pointer;
+}
+
+.add-cart:hover {
+  scale: 1.1 1.1;
+  transition: .4s ease;
 }
 
 .bundle {
@@ -651,6 +658,11 @@ body {
   padding: 14.5px 46px;
   background: #fde757;
   cursor: pointer;
+}
+
+.cart:hover {
+  scale: 1.1 1.1;
+  transition: .4s ease;
 }
 
 .cart p {
@@ -1335,22 +1347,31 @@ body {
 .footer-desc {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 13px;
-  border-bottom: 2px solid var(--secondary-color-white);
+  justify-content: center;
+  padding-bottom: 12px;
+  position: relative;
 }
 
-.footer-desc p {
+.footer-desc input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--secondary-color-white);
+  padding: 10px 0;
+  color: var(--secondary-color-white);
+}
+
+input::placeholder {
   color: var(--secondary-color-white);
   font-size: 16px;
   font-weight: 400;
   line-height: 100%;
 }
 
-.footer-desc img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer-desc label {
+  position: absolute;
+  right: 0;
   cursor: pointer;
 }
 
@@ -1430,7 +1451,7 @@ body {
 }
 
 .socials img:hover {
-  scale: 1.2 1.2;
+  scale: 2 2;
   transition: .5s ease;
 }
 
